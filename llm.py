@@ -49,6 +49,13 @@ def _fallback_summary(app_name: str, clusters: Sequence[dict[str, Any]]) -> dict
         f"Investigate root causes behind {cluster['theme'].lower()}."
         for cluster in top_three[:3]
     ]
+    default_actions = [
+        "Review top complaint patterns from recent reviews and support tickets.",
+        "Prioritize the highest-friction user journey for a focused fix sprint.",
+        "Add instrumentation to measure whether the shipped fix reduces negative feedback.",
+    ]
+    while len(action_items) < 3:
+        action_items.append(default_actions[len(action_items)])
     return {
         "summary": truncate_words(summary, 250),
         "quotes": quotes[:3],
