@@ -1,0 +1,7 @@
+streamlit
+google-play-scraper
+requests
+sentence-transformers
+scikit-learn
+openai
+torch
