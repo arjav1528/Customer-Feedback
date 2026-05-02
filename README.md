@@ -25,7 +25,7 @@ AI Review Intelligence & Product Pulse MVP built with Streamlit.
 ## Setup
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 export OPENAI_API_KEY=your_key_here
